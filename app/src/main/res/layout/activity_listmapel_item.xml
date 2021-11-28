@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".listmapel_item"
+    android:layout_gravity="center"
+    android:layout_marginTop="4dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginBottom="6dp"
+    app:cardCornerRadius="15dp"
+    android:padding="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/lm_photo"
+            android:layout_width="200px"
+            android:layout_height="200px"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/profil1"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="2dp" />
+
+        <TextView
+            android:id="@+id/lm_guru"
+            android:layout_width="255dp"
+            android:layout_height="22dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/lm_photo"
+            android:text="Nama Guru"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/lm_photo"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/lm_mapel"
+            android:layout_width="256dp"
+            android:layout_height="17dp"
+            android:layout_below="@+id/lm_guru"
+            android:layout_toEndOf="@id/lm_photo"
+            android:ellipsize="end"
+            android:maxLines="5"
+            android:text="Nama Mata pelajaran"
+            app:layout_constraintBottom_toTopOf="@+id/lm_lokasi"
+            app:layout_constraintEnd_toEndOf="@+id/lm_guru"
+            app:layout_constraintStart_toStartOf="@+id/lm_guru"
+            app:layout_constraintTop_toBottomOf="@+id/lm_guru"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/lm_lokasi"
+            android:layout_width="257dp"
+            android:layout_height="17dp"
+            android:layout_below="@+id/lm_mapel"
+            android:layout_toEndOf="@id/lm_photo"
+            android:ellipsize="end"
+            android:maxLines="5"
+            android:text="Lokasi Guru"
+            app:layout_constraintBottom_toTopOf="@+id/lm_score"
+            app:layout_constraintEnd_toEndOf="@+id/lm_guru"
+            app:layout_constraintStart_toStartOf="@+id/lm_mapel"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/lm_score"
+            android:layout_width="229dp"
+            android:layout_height="17dp"
+            android:layout_below="@+id/lm_lokasi"
+            android:layout_toEndOf="@id/lm_photo"
+            android:ellipsize="end"
+            android:maxLines="5"
+            android:text="penilaian"
+            app:layout_constraintBottom_toBottomOf="@+id/lm_star"
+            app:layout_constraintEnd_toEndOf="@+id/lm_guru"
+            app:layout_constraintStart_toEndOf="@+id/lm_star"
+            app:layout_constraintTop_toTopOf="@+id/lm_star" />
+
+        <ImageView
+            android:id="@+id/lm_star"
+            android:layout_width="16dp"
+            android:layout_height="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/lm_photo"
+            app:layout_constraintStart_toStartOf="@+id/lm_lokasi"
+            app:srcCompat="@drawable/star"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

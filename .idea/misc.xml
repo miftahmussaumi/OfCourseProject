@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Aplikasi/ofCourse/app/src/main/res/drawable/background_ungu.xml" value="0.2212962962962963" />
+        <entry key="..\:/Aplikasi/ofCourse/app/src/main/res/drawable/bglist.xml" value="0.22552083333333334" />
+        <entry key="..\:/Aplikasi/ofCourse/app/src/main/res/drawable/ic_background.xml" value="0.2212962962962963" />
+        <entry key="..\:/Aplikasi/ofCourse/app/src/main/res/layout/activity_dashboard.xml" value="0.2" />
+        <entry key="..\:/Aplikasi/ofCourse/app/src/main/res/layout/activity_hasil_cari.xml" value="0.1526268115942029" />
+        <entry key="..\:/Aplikasi/ofCourse/app/src/main/res/layout/activity_listmatpel.xml" value="0.1953125" />
+        <entry key="..\:/Aplikasi/ofCourse/app/src/main/res/layout/activity_login.xml" value="0.1526268115942029" />
+        <entry key="..\:/Aplikasi/ofCourse/app/src/main/res/layout/activity_main.xml" value="0.1526268115942029" />
+        <entry key="..\:/Aplikasi/ofCourse/app/src/main/res/layout/activity_main2.xml" value="0.1526268115942029" />
+        <entry key="..\:/Aplikasi/ofCourse/app/src/main/res/layout/activity_main3.xml" value="0.1526268115942029" />
+        <entry key="..\:/CloneGitthub/ofCourse/app/src/main/res/drawable-v24/daftar.xml" value="0.22083333333333333" />
+        <entry key="..\:/CloneGitthub/ofCourse/app/src/main/res/drawable/background_ungu.xml" value="0.22083333333333333" />
+        <entry key="..\:/CloneGitthub/ofCourse/app/src/main/res/drawable/bglist.xml" value="0.22083333333333333" />
+        <entry key="..\:/CloneGitthub/ofCourse/app/src/main/res/drawable/button_edit.xml" value="0.22083333333333333" />
+        <entry key="..\:/CloneGitthub/ofCourse/app/src/main/res/drawable/button_home.xml" value="0.22083333333333333" />
+        <entry key="..\:/CloneGitthub/ofCourse/app/src/main/res/drawable/button_login.xml" value="0.22083333333333333" />
+        <entry key="..\:/CloneGitthub/ofCourse/app/src/main/res/drawable/editprofil.xml" value="0.22083333333333333" />
+        <entry key="..\:/CloneGitthub/ofCourse/app/src/main/res/layout/activity_dashboard.xml" value="0.25" />
+        <entry key="..\:/CloneGitthub/ofCourse/app/src/main/res/layout/activity_detail_guru.xml" value="0.19610507246376813" />
+        <entry key="..\:/CloneGitthub/ofCourse/app/src/main/res/layout/activity_edit.xml" value="0.18840579710144928" />
+        <entry key="..\:/CloneGitthub/ofCourse/app/src/main/res/layout/activity_hasil_cari.xml" value="0.18840579710144928" />
+        <entry key="..\:/CloneGitthub/ofCourse/app/src/main/res/layout/activity_listmapel.xml" value="0.33" />
+        <entry key="..\:/CloneGitthub/ofCourse/app/src/main/res/layout/activity_listmapel_item.xml" value="0.3854166666666667" />
+        <entry key="..\:/CloneGitthub/ofCourse/app/src/main/res/layout/activity_listmatpel.xml" value="0.12273550724637682" />
+        <entry key="..\:/CloneGitthub/ofCourse/app/src/main/res/layout/activity_login.xml" value="0.18840579710144928" />
+        <entry key="..\:/CloneGitthub/ofCourse/app/src/main/res/layout/activity_main.xml" value="0.18840579710144928" />
+        <entry key="..\:/CloneGitthub/ofCourse/app/src/main/res/layout/activity_main3.xml" value="0.18840579710144928" />
+        <entry key="..\:/CloneGitthub/ofCourse/app/src/main/res/layout/activity_pencarian.xml" value="0.18840579710144928" />
+        <entry key="..\:/CloneGitthub/ofCourse/app/src/main/res/layout/activity_pesanan_belum_disetujui.xml" value="0.18840579710144928" />
+        <entry key="..\:/CloneGitthub/ofCourse/app/src/main/res/layout/activity_profile.xml" value="0.18840579710144928" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/drawable-v24/daftar.xml" value="0.1649122807017544" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1046875" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/drawable/back_layer.xml" value="0.1649122807017544" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/drawable/background_ungu.xml" value="0.1649122807017544" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/drawable/button.xml" value="0.16233766233766234" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/drawable/button_btn.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/drawable/button_daftar.xml" value="0.1530701754385965" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/drawable/button_edit.xml" value="0.1649122807017544" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/drawable/button_home.xml" value="0.1649122807017544" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/drawable/button_login.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/drawable/button_logout.xml" value="0.1649122807017544" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/drawable/editprofil.xml" value="0.13999999999999999" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/drawable/edittext.xml" value="0.1649122807017544" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1046875" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/drawable/ic_launcher_background2.xml" value="0.1649122807017544" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/drawable/login.xml" value="0.1510822510822511" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/layout/activity_daftar.xml" value="0.1513157894736842" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/layout/activity_detail_guru.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/layout/activity_edit.xml" value="0.1513157894736842" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/layout/activity_hasil_cari.xml" value="0.13333333333333333" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/layout/activity_home.xml" value="0.1" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/layout/activity_main2.xml" value="0.13333333333333333" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/layout/activity_main3.xml" value="0.1" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/layout/activity_pencarian.xml" value="0.13333333333333333" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/layout/activity_pesanan_belum_disetujui.xml" value="0.1513157894736842" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/layout/activity_pesanan_disetujui.xml" value="0.1513157894736842" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/layout/activity_profile.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/layout/activity_review_berhasil.xml" value="0.1513157894736842" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/layout/daftar_activity.xml" value="0.1513157894736842" />
+        <entry key="..\:/Users/S430F/AndroidStudioProjects/ofCourse/app/src/main/res/layout/login_activity.xml" value="0.1" />
+        <entry key="..\:/ofCourse/app/src/main/res/drawable-v24/daftar.xml" value="0.1899122807017544" />
+        <entry key="..\:/ofCourse/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1899122807017544" />
+        <entry key="..\:/ofCourse/app/src/main/res/drawable/back_layer.xml" value="0.1899122807017544" />
+        <entry key="..\:/ofCourse/app/src/main/res/drawable/background_ungu.xml" value="0.1899122807017544" />
+        <entry key="..\:/ofCourse/app/src/main/res/drawable/bglist.xml" value="0.1899122807017544" />
+        <entry key="..\:/ofCourse/app/src/main/res/drawable/button_daftar.xml" value="0.1899122807017544" />
+        <entry key="..\:/ofCourse/app/src/main/res/drawable/button_edit.xml" value="0.1899122807017544" />
+        <entry key="..\:/ofCourse/app/src/main/res/drawable/button_home.xml" value="0.1899122807017544" />
+        <entry key="..\:/ofCourse/app/src/main/res/drawable/button_login.xml" value="0.1899122807017544" />
+        <entry key="..\:/ofCourse/app/src/main/res/drawable/button_logout.xml" value="0.1899122807017544" />
+        <entry key="..\:/ofCourse/app/src/main/res/drawable/button_review.xml" value="0.1899122807017544" />
+        <entry key="..\:/ofCourse/app/src/main/res/drawable/editprofil.xml" value="0.1899122807017544" />
+        <entry key="..\:/ofCourse/app/src/main/res/drawable/edittext.xml" value="0.1899122807017544" />
+        <entry key="..\:/ofCourse/app/src/main/res/drawable/home.xml" value="0.1899122807017544" />
+        <entry key="..\:/ofCourse/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1899122807017544" />
+        <entry key="..\:/ofCourse/app/src/main/res/drawable/radius_box.xml" value="0.1899122807017544" />
+        <entry key="..\:/ofCourse/app/src/main/res/drawable/radius_box_2.xml" value="0.1899122807017544" />
+        <entry key="..\:/ofCourse/app/src/main/res/layout/activity_daftar.xml" value="0.1763157894736842" />
+        <entry key="..\:/ofCourse/app/src/main/res/layout/activity_dashboard.xml" value="0.1763157894736842" />
+        <entry key="..\:/ofCourse/app/src/main/res/layout/activity_dashboard_item.xml" value="0.1763157894736842" />
+        <entry key="..\:/ofCourse/app/src/main/res/layout/activity_detail_guru.xml" value="0.22" />
+        <entry key="..\:/ofCourse/app/src/main/res/layout/activity_edit.xml" value="0.25" />
+        <entry key="..\:/ofCourse/app/src/main/res/layout/activity_hasil_cari.xml" value="0.1763157894736842" />
+        <entry key="..\:/ofCourse/app/src/main/res/layout/activity_listmapel.xml" value="0.1763157894736842" />
+        <entry key="..\:/ofCourse/app/src/main/res/layout/activity_listmapel_item.xml" value="0.1763157894736842" />
+        <entry key="..\:/ofCourse/app/src/main/res/layout/activity_listmatpel.xml" value="0.1763157894736842" />
+        <entry key="..\:/ofCourse/app/src/main/res/layout/activity_login.xml" value="0.11594202898550725" />
+        <entry key="..\:/ofCourse/app/src/main/res/layout/activity_main.xml" value="0.1763157894736842" />
+        <entry key="..\:/ofCourse/app/src/main/res/layout/activity_main3.xml" value="0.1763157894736842" />
+        <entry key="..\:/ofCourse/app/src/main/res/layout/activity_pencarian.xml" value="0.1763157894736842" />
+        <entry key="..\:/ofCourse/app/src/main/res/layout/activity_pesanan_belum_disetujui.xml" value="0.1763157894736842" />
+        <entry key="..\:/ofCourse/app/src/main/res/layout/activity_pesanan_disetujui.xml" value="0.1763157894736842" />
+        <entry key="..\:/ofCourse/app/src/main/res/layout/activity_profile.xml" value="0.22" />
+        <entry key="..\:/ofCourse/app/src/main/res/layout/activity_review_berhasil.xml" value="0.1763157894736842" />
+        <entry key="..\:/ofCourse/app/src/main/res/layout/item_review.xml" value="0.1763157894736842" />
+        <entry key="..\:/ofCourse/app/src/main/res/xml/network_security_config.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.22" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

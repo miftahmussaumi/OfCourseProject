@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".ProfileActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        android:background="@drawable/bg_profile">
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="20dp"
+            android:text="LOGOUT"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/foto_profil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/profil1"
+            tools:ignore="InvalidId" />
+
+        <TextView
+            android:id="@+id/nama_pennguna"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/foto_profil"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="Nama Pengguna"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+
+        <ImageView
+            android:id="@+id/button_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/nama_pennguna"
+            android:layout_alignBottom="@+id/nama_pennguna"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="103dp"
+            android:layout_marginEnd="102dp"
+            android:layout_marginBottom="-60dp"
+            android:background="@drawable/button_edit_profile" />
+
+        <ImageView
+            android:id="@+id/p_profil"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/button_edit"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/p_username" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/p_profil"
+            android:layout_marginStart="28dp"
+            android:layout_marginBottom="19dp"
+            android:layout_toEndOf="@+id/p_profil"
+            android:text="USERNAME"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/username"
+            android:layout_alignBottom="@+id/p_profil"
+            android:layout_marginStart="3dp"
+            android:layout_marginBottom="3dp"
+            android:text="isi username"
+            android:textColor="@color/black"
+            android:textSize="10dp" />
+
+        <ImageView
+            android:id="@+id/p_phone"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/p_profil"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/p_phone" />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/p_phone"
+            android:layout_marginStart="28dp"
+            android:layout_marginBottom="19dp"
+            android:layout_toEndOf="@+id/p_phone"
+            android:text="PHONE"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/username"
+            android:layout_alignBottom="@+id/p_phone"
+            android:layout_marginStart="3dp"
+            android:layout_marginBottom="3dp"
+            android:text="isi phone"
+            android:textColor="@color/black"
+            android:textSize="10dp" />
+
+        <ImageView
+            android:id="@+id/p_email"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/p_phone"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/p_email" />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/p_email"
+            android:layout_marginStart="28dp"
+            android:layout_marginBottom="19dp"
+            android:layout_toEndOf="@+id/p_phone"
+            android:text="EMAIL"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/username"
+            android:layout_alignBottom="@+id/p_email"
+            android:layout_marginStart="3dp"
+            android:layout_marginBottom="3dp"
+            android:text="isi email"
+            android:textColor="@color/black"
+            android:textSize="10dp" />
+
+        <ImageView
+            android:id="@+id/p_add"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/p_email"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/p_lokasi" />
+
+        <TextView
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/p_add"
+            android:layout_marginStart="28dp"
+            android:layout_marginBottom="19dp"
+            android:layout_toEndOf="@+id/p_phone"
+            android:text="ADDRESS"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/add"
+            android:layout_alignBottom="@+id/p_add"
+            android:layout_marginStart="3dp"
+            android:layout_marginBottom="3dp"
+            android:text="isi alamat"
+            android:textColor="@color/black"
+            android:textSize="10dp" />
+
+        <ImageView
+            android:id="@+id/p_level"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/p_add"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/p_level" />
+
+        <TextView
+            android:id="@+id/level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/p_level"
+            android:layout_marginStart="28dp"
+            android:layout_marginBottom="19dp"
+            android:layout_toEndOf="@+id/p_level"
+            android:text="EMAIL"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/username"
+            android:layout_alignBottom="@+id/p_level"
+            android:layout_marginStart="3dp"
+            android:layout_marginBottom="3dp"
+            android:text="isi level"
+            android:textColor="@color/black"
+            android:textSize="10dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

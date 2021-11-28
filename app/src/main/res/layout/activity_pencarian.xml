@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".pencarian"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="@drawable/background_ungu"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:paddingTop="40dp"
+            android:paddingLeft="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="25dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/font" />
+        </LinearLayout>
+        <LinearLayout
+            android:paddingTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="266dp"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/search_bar" />
+
+            <ImageButton
+                android:id="@+id/buttonMap"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="35dp"
+                app:srcCompat="@drawable/cari" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:paddingLeft="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:paddingBottom="30dp"
+            android:text="Guru bahasa inggris"
+            android:textColor="#000000"
+            android:textSize="18dp"></TextView>
+
+        <ImageButton
+            android:id="@+id/gurua"
+            android:layout_width="331dp"
+            android:layout_height="138dp"
+            android:layout_marginStart="21dp"
+            android:background="#ffffff"
+            android:clickable="true"
+            android:visibility="visible"
+            app:srcCompat="@drawable/gurua"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:id="@+id/guru2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/gurub" />
+
+        <ImageView
+            android:id="@+id/guru3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/guruc" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
