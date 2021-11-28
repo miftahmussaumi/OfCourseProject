@@ -13,6 +13,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OfCourse">
         <activity
+            android:name=".pesanan_belum_disetujui"
+            android:exported="false" />
+        <activity
+            android:name=".pesanan_disetujui"
+            android:exported="false" />
+        <activity
+            android:name=".beri_review"
+            android:exported="false" />
+        <activity
+            android:name=".review_berhasil"
+            android:exported="false" />
+        <activity
             android:name=".Reservasiselesai"
             android:exported="false" />
         <activity
