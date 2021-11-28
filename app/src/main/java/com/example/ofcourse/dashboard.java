@@ -57,7 +57,7 @@ public class dashboard extends AppCompatActivity implements DashboardAdapter.OnD
         });
 
         pemesanan = findViewById(R.id.pemesanan);
-        profil.setOnClickListener(new View.OnClickListener() {
+        pemesanan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

@@ -64,7 +64,6 @@ public class detail_guru extends AppCompatActivity {
         biaya = (TextView) findViewById(R.id.biaya);
 
         butonreservasi = findViewById(R.id.buttonReservasi);
-
         butonreservasi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,15 +75,15 @@ public class detail_guru extends AppCompatActivity {
             }
         });
 
-        butonreservasi = findViewById(R.id.buttonReservasi);
-        butonreservasi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(detail_guru.this, Formreservasi.class);
-                startActivity(intent);
-            }
-        });
+//        butonreservasi = findViewById(R.id.buttonReservasi);
+//        butonreservasi.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                Intent intent = new Intent(detail_guru.this, Formreservasi.class);
+//                startActivity(intent);
+//            }
+//        });
 
 
     }
