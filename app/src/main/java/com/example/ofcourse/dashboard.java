@@ -40,7 +40,6 @@ public class dashboard extends AppCompatActivity implements DashboardAdapter.OnD
         profil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(dashboard.this, ProfileActivity.class);
                 startActivity(intent);
             }
@@ -50,7 +49,6 @@ public class dashboard extends AppCompatActivity implements DashboardAdapter.OnD
         pencarian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(dashboard.this, pencarian.class);
                 startActivity(intent);
             }
