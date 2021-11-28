@@ -56,15 +56,15 @@ public class dashboard extends AppCompatActivity implements DashboardAdapter.OnD
             }
         });
 
-//        pemesanan = findViewById(R.id.pemesanan);
-//        profil.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                Intent intent = new Intent(dashboard.this, pemesanan_activity.class);
-//                startActivity(intent);
-//            }
-//        });
+        pemesanan = findViewById(R.id.pemesanan);
+        profil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(dashboard.this, pesanan_belum_disetujui.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public void addData(){
