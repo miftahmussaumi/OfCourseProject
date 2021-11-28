@@ -21,7 +21,6 @@ import Model.Review;
 import java.util.ArrayList;
 
 public class detail_guru extends AppCompatActivity {
-
     RecyclerView rvReview;
     ReviewAdapter reviewAdapter;
     public static final String ITEM_EXTRA = "item_extra";
