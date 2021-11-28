@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#601954"
+    tools:context=".beri_review">
+
+    <View
+        android:id="@+id/view163"
+        android:layout_width="0dp"
+        android:layout_height="682dp"
+        android:background="@drawable/back_layer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView179"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Review"
+        android:textColor="#fff"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07" />
+
+    <ImageView
+        android:id="@+id/imageView145"
+        android:layout_width="87dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="576dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view163"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view163"
+        app:srcCompat="@drawable/ellipse" />
+
+    <TextView
+        android:id="@+id/textView122"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="S1- Jurusan Bahasa Inggris"
+        android:textColor="#000"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_detailpemesanan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView123"
+        android:layout_width="314dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="259dp"
+        android:layout_marginBottom="372dp"
+        android:text="Jadwal Sesi : Rabu, 14.00 WIB
+        nDurasi per Sesi : 1 jam/hari
+        \nTotal Sesi :  3 Sesi
+        \nLokasi : BC Unand
+        \nKeterangan Tambahan : -
+        \nTotal :  Rp 300.000"
+        android:textColor="#000"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.658"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view163" />
+
+    <TextView
+        android:id="@+id/textView144"
+        android:layout_width="42dp"
+        android:layout_height="16dp"
+        android:text="Nilai"
+        android:textColor="#601954"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view163"
+        app:layout_constraintEnd_toEndOf="@+id/view163"
+        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.583" />
+
+    <ImageView
+        android:id="@+id/imageView152"
+        android:layout_width="156dp"
+        android:layout_height="19dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.622"
+        app:srcCompat="@drawable/group_7" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine6"
+        android:layout_width="271dp"
+        android:layout_height="62dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="Kak Alia  ngajarnya sabar banget. Aku diajarin dari
+        \nawal dan ngga cuman grammar tapi juga ngajarin pronounciation juga."
+        android:textColor="#000"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view163"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.705" />
+
+    <TextView
+        android:id="@+id/textView_terimakasih"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*detail pemesanan tidak akan ditampilkan di kolom review"
+        android:textColor="#978594"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view163"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.764" />
+
+    <Button
+        android:id="@+id/button_berikanpenilaian"
+        android:layout_width="221dp"
+        android:layout_height="31dp"
+        android:background="@drawable/button_review"
+        android:text="Berikan Penilaian"
+        android:textColor="#fff"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.827" />
+
+    <TextView
+        android:id="@+id/textView_nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Alia Zalea"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView145"
+        app:layout_constraintVertical_bias="0.011" />
+
+    <TextView
+        android:id="@+id/textView_detailpemesanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="216dp"
+        android:layout_marginBottom="452dp"
+        android:text="Detail Pemesanan"
+        android:textColor="#601954"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view163"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.139"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view163" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

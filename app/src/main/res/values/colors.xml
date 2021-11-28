@@ -8,6 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="transparant">#00601954</color>
+    <color name="ungu">#601954</color>
     <color name="ungu_muda">#D3B2CE</color>
     <color name="ungu_profil">#EAD1D1</color>
     <color name="ungu_pemesanan">#7B3B5D</color>

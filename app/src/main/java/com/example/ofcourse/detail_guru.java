@@ -76,6 +76,16 @@ public class detail_guru extends AppCompatActivity {
             }
         });
 
+        butonreservasi = findViewById(R.id.buttonReservasi);
+        butonreservasi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(detail_guru.this, Formreservasi.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 
