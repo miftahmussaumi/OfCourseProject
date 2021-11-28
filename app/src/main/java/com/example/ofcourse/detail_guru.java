@@ -1,5 +1,6 @@
 package com.example.ofcourse;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -7,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -25,11 +27,14 @@ public class detail_guru extends AppCompatActivity {
     RecyclerView rvReview;
     ReviewAdapter reviewAdapter;
     public static final String ITEM_EXTRA = "item_extra";
+    Button butonreservasi;
+    private TextView guru, mapl, biaya, biayaa;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_guru);
+
 
         reviewAdapter = new ReviewAdapter();
         reviewAdapter.setListReview(generateData());
@@ -53,6 +58,25 @@ public class detail_guru extends AppCompatActivity {
             getSupportActionBar().setTitle("Detail Guru");
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
+
+        guru = (TextView) findViewById(R.id.d_nama_guru);
+        mapl = (TextView) findViewById(R.id.d_mapel_guru);
+        biaya = (TextView) findViewById(R.id.biaya);
+
+        butonreservasi = findViewById(R.id.buttonReservasi);
+
+        butonreservasi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(detail_guru.this, Formreservasi.class);
+                intent.putExtra("namaguru", guru.getText().toString());
+                intent.putExtra("mapel", mapl.getText().toString());
+                intent.putExtra("biaya", biaya.getText().toString());
+                startActivity(intent);
+            }
+        });
+
+
     }
 
     @Override
@@ -60,6 +84,8 @@ public class detail_guru extends AppCompatActivity {
         finish();
         return true;
     }
+
+
 
     private ArrayList<Review> generateData() {
         ArrayList<Review> listReview = new ArrayList<>();
