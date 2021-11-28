@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Formreservasi">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="414dp"
+                    android:layout_height="67dp"
+                    android:background="@drawable/background_ungu"
+                    android:screenReaderFocusable="true"
+                    android:verticalScrollbarPosition="defaultPosition"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/comfortaa_bold"
+                    android:text="Form Reservasi"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/view" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="Nomor Transaksi"
+                android:textColor="#070707"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/formnotr"
+                android:layout_width="316dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/bg_input"
+                android:paddingLeft="10dp"
+                android:text="a123456"
+                android:textColor="#050505" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="117dp"
+                android:layout_height="19dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="Mata Pelajaran"
+                android:textColor="#0C0C0C"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.088"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+                app:layout_constraintVertical_bias="0.027" />
+
+            <TextView
+                android:id="@+id/formmapel"
+                android:layout_width="316dp"
+                android:layout_height="24dp"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/bg_input"
+                android:paddingLeft="10dp"
+                android:text="intan"
+                android:textColor="#101010" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="112dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="10dp"
+                android:text="Biaya/Jam"
+                android:textColor="#040404"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.083"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView10"
+                app:layout_constraintVertical_bias="0.057" />
+
+            <TextView
+                android:id="@+id/formbiaya"
+                android:layout_width="316dp"
+                android:layout_height="24dp"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/bg_input"
+                android:paddingLeft="10dp"
+                android:text="100000"
+                android:textColor="#101010" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="136dp"
+                android:layout_height="19dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="10dp"
+                android:text="Nama Guru"
+                android:textColor="#020202"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.079"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                app:layout_constraintVertical_bias="0.043" />
+
+            <TextView
+                android:id="@+id/formguru"
+                android:layout_width="316dp"
+                android:layout_height="24dp"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/bg_input"
+                android:paddingLeft="10dp"
+                android:text="intan"
+                android:textColor="#101010"
+                android:textColorHint="#D3D1D1" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="50dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="10dp"
+                android:text="Tanggal"
+                android:textColor="#020202"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.074"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11"
+                app:layout_constraintVertical_bias="0.06" />
+
+            <EditText
+                android:id="@+id/formtgl"
+                android:layout_width="316dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/bg_input"
+                android:hint="dd-mm-yyyy"
+                android:paddingHorizontal="10dp"
+                android:textColor="#0B0B0B"
+                android:textColorHint="#9F9F9F"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.377"
+                app:layout_constraintStart_toEndOf="@+id/textView9"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+                app:layout_constraintVertical_bias="0.028"
+                tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="43dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="10dp"
+                android:text="Jam"
+                android:textColor="#050505"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.073"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView12"
+                app:layout_constraintVertical_bias="0.067" />
+
+            <EditText
+                android:id="@+id/formjam"
+                android:layout_width="316dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/bg_input"
+                android:hint="--.--"
+                android:paddingHorizontal="10dp"
+                android:textColor="#0B0B0B"
+                android:textColorHint="#9F9F9F"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.377"
+                app:layout_constraintStart_toEndOf="@+id/textView9"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+                app:layout_constraintVertical_bias="0.028"
+                tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="231dp"
+                android:layout_height="19dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="10dp"
+                android:text="Durasi Per Sesi (max 2 jam)"
+                android:textColor="#050505"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.085"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView13"
+                app:layout_constraintVertical_bias="0.081" />
+
+            <EditText
+                android:id="@+id/formdurasi"
+                android:layout_width="316dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/bg_input"
+                android:hint="jumlah  jam"
+                android:paddingHorizontal="10dp"
+                android:textColor="#0B0B0B"
+                android:textColorHint="#9F9F9F"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.377"
+                app:layout_constraintStart_toEndOf="@+id/textView9"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+                app:layout_constraintVertical_bias="0.028"
+                tools:ignore="MissingConstraints,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="239dp"
+                android:layout_height="19dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="10dp"
+                android:text=" Jumlah sesi (Max. 2 sesi/hari)"
+                android:textColor="#090909"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.08"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView14"
+                app:layout_constraintVertical_bias="0.081" />
+
+            <EditText
+                android:id="@+id/formjumlah"
+                android:layout_width="316dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/bg_input"
+                android:hint="jumlah sesi"
+                android:paddingHorizontal="10dp"
+                android:textColor="#0B0B0B"
+                android:textColorHint="#9F9F9F"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.377"
+                app:layout_constraintStart_toEndOf="@+id/textView9"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+                app:layout_constraintVertical_bias="0.028"
+                tools:ignore="MissingConstraints,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="41dp"
+                android:layout_height="19dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="10dp"
+                android:text="Lokasi"
+                android:textAlignment="center"
+                android:textColor="#090909"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.072"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                app:layout_constraintVertical_bias="0.076" />
+
+            <EditText
+                android:id="@+id/formlokasi"
+                android:layout_width="316dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/bg_input"
+                android:paddingHorizontal="10dp"
+                android:textColor="#0B0B0B"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.377"
+                app:layout_constraintStart_toEndOf="@+id/textView9"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+                app:layout_constraintVertical_bias="0.028"
+                tools:ignore="MissingConstraints,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif"
+                android:text="Keterangan Tambahan"
+                android:textColor="#070707" />
+
+            <EditText
+                android:id="@+id/formket"
+                android:layout_width="316dp"
+                android:layout_height="63dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/bg_input"
+                android:hint="materi spesifik"
+                android:paddingHorizontal="10dp"
+                android:textColor="#0B0B0B"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.377"
+                app:layout_constraintStart_toEndOf="@+id/textView9"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+                app:layout_constraintVertical_bias="0.028"
+                tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+
+
+            <Button
+                android:id="@+id/buttonpesan"
+                android:layout_width="196dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/bg_button"
+                android:gravity="center"
+                android:justificationMode="none"
+                android:keepScreenOn="false"
+                android:keyboardNavigationCluster="false"
+                android:text="PESAN SEKARANG"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
