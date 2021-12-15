@@ -8,6 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ApiClient {
     private static  final String BASE_URL = "https://ofcourse2.herokuapp.com/";
     private  static Retrofit retrofit;
+    private static ApiClient clientobject;
 
     public  static Retrofit getClient(){
 
@@ -20,5 +21,18 @@ public class ApiClient {
         }
         return retrofit;
     }
+
+//    public static synchronized ApiClient getInstance(){
+//        if (clientobject==null)
+//            clientobject=new ApiClient();
+//
+//        return clientobject;
+//    }
+//
+//    public ApiInterface getapi(){
+//        return retrofit.create(ApiInterface.class);
+//    }
+
+
 
 }
