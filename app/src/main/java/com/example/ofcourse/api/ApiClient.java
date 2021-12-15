@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class ApiClient {
-    private static  final String BASE_URL = "https://ofcourse3.herokuapp.com/";
+    private static  final String BASE_URL = "https://ofcourse2.herokuapp.com/";
     private  static Retrofit retrofit;
 
     public  static Retrofit getClient(){
@@ -16,6 +16,7 @@ public class ApiClient {
                     .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
+
         }
         return retrofit;
     }

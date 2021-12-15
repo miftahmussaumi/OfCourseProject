@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+
 import com.example.ofcourse.Model.login.Login;
 import com.example.ofcourse.api.ApiClient;
 import com.example.ofcourse.api.ApiInterface;
@@ -19,8 +20,8 @@ import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
     Button btnlogin;
-    EditText editUsername, editPassword;
-    String Username, Password;
+    EditText editEmail, editPassword;
+    String Email, Password;
     ApiInterface apiInterface;
 
     @Override
@@ -28,7 +29,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        editUsername = findViewById(R.id.editUsername);
+        editEmail = findViewById(R.id.editEmail);
         editPassword = findViewById(R.id.editPassword);
         btnlogin = findViewById(R.id.btnlogin);
         btnlogin.setOnClickListener(this);
@@ -38,22 +39,23 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View v){
         switch (v.getId()) {
             case R.id.btnlogin:
-                Username = editUsername.getText().toString();
+                Email = editEmail.getText().toString();
                 Password = editPassword.getText().toString();
-                login(Username, Password);
+                login(Email, Password);
                 break;
         }
 
     }
-    private void login(String username, String password){
+    private void login(String email, String password){
 
         apiInterface = ApiClient.getClient().create(ApiInterface.class );
-        Call<Login> loginCall = apiInterface.loginResponse(username, password);
+        Call<Login> loginCall = apiInterface.loginResponse(email, password);
         loginCall.enqueue(new Callback<Login>() {
             @Override
             public void onResponse(Call<Login> call, Response<Login> response) {
                 if (response.body() != null & response.isSuccessful() && response.body().isStatus()) {
-                    Toast.makeText(LoginActivity.this, response.body().getLoginData().getName(), Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(LoginActivity.this, response.body().getLoginData().getName(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(LoginActivity.this, dashboard.class);
                     startActivity(intent);
 

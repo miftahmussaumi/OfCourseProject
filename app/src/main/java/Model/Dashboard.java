@@ -1,27 +1,27 @@
 package Model;
 
 public class Dashboard {
-    String title;
-    String img;
+    String mapel;
+    String pict;
 
-    public Dashboard(String title, String img){
-        this.title = title;
-        this.img = img;
+    public Dashboard(String mapel, String pict){
+        this.mapel = mapel;
+        this.pict = pict;
     }
 
-    public String getTitle() {
-        return title;
+    public String getMapel() {
+        return mapel;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setMapel(String mapel) {
+        this.mapel = mapel;
     }
 
-    public String getImg() {
-        return img;
+    public String getPict() {
+        return pict;
     }
 
-    public void setImg(String img) {
-        this.img = img;
+    public void setPict(String pict) {
+        this.pict = pict;
     }
 }

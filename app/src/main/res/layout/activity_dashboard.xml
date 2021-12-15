@@ -81,9 +81,9 @@
         android:id="@+id/rv_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_below="@id/profil"
-        tools:listitem="@layout/activity_dashboard_item"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        tools:listitem="@layout/activity_dashboard_item" />
 </RelativeLayout>

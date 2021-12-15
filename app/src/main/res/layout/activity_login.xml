@@ -43,14 +43,14 @@
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/editUsername"
+                    android:id="@+id/editEmail"
                     android:layout_width="match_parent"
                     android:layout_height="52dp"
                     android:layout_marginTop="0dp"
                     android:layout_marginBottom="0dp"
                     android:background="@drawable/edittext"
                     android:ems="10"
-                    android:hint="Username"
+                    android:hint="Email"
                     android:inputType="textPersonName"
                     android:paddingLeft="10dp"
                     android:textColor="#000000"
