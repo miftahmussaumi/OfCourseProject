@@ -53,13 +53,13 @@ public class pencarian extends AppCompatActivity {
     public void addData(){
         datapencarian = new ArrayList<>();
         datapencarian.add(new Pencarian("Alia Zalea", "Bahasa Inggris","Padang, Sumatera Barat","5.0","profil1"));
-        datapencarian.add(new Pencarian("Erisca Febrianne", "Bahasa Inggris","Jakarta","4.8","profil"));
-        datapencarian.add(new Pencarian("Fajrul Sasad","Bahasa Inggris","Jakarta","4.8","profil2"));
-        datapencarian.add(new Pencarian("Thomas Schdmit","Bahasa Inggris","Jakarta","4.8","profil3"));
-        datapencarian.add(new Pencarian("Yulian Sriminov","Bahasa Inggris","Jakarta","4.8","profil"));
-        datapencarian.add(new Pencarian("Irvandi Frozan","Bahasa Inggris","Jakarta","4.8","profil2"));datapencarian.add(new Pencarian("Yulian Sriminov","Bahasa Inggris","Jakarta","4.8","profil"));
-        datapencarian.add(new Pencarian("Irvandi Frozan","Bahasa Inggris","Jakarta","4.8","profil2"));datapencarian.add(new Pencarian("Yulian Sriminov","Bahasa Inggris","Jakarta","4.8","profil"));
-        datapencarian.add(new Pencarian("Irvandi Frozan","Bahasa Inggris","Jakarta","4.8","profil2"));
+        datapencarian.add(new Pencarian("Erisca Febrianne", "Bahasa Inggris","Padang","4.8","profil"));
+        datapencarian.add(new Pencarian("Fajrul Sasad","Bahasa Inggris","Padang","4.8","profil2"));
+        datapencarian.add(new Pencarian("Thomas Schdmit","Bahasa Inggris","Padang","4.8","profil3"));
+        datapencarian.add(new Pencarian("Yulian Sriminov","Bahasa Inggris","Padang","4.8","profil"));
+        datapencarian.add(new Pencarian("Irvandi Frozan","Bahasa Inggris","Padang","4.8","profil2"));datapencarian.add(new Pencarian("Yulian Sriminov","Bahasa Inggris","Jakarta","4.8","profil"));
+        datapencarian.add(new Pencarian("Irvandi Frozan","Bahasa Inggris","Padang","4.8","profil2"));datapencarian.add(new Pencarian("Yulian Sriminov","Bahasa Inggris","Jakarta","4.8","profil"));
+        datapencarian.add(new Pencarian("Irvandi Frozan","Bahasa Inggris","Padang","4.8","profil2"));
     }
 
 //    @Override

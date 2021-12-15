@@ -81,7 +81,7 @@ public class dashboard extends AppCompatActivity implements DashboardAdapter.OnD
     @Override
     public void onClick(Dashboard dashboard) {
         Intent detailIntent =  new Intent(this,listmapel.class);
-        detailIntent.putExtra("MAPEL",dashboard.getTitle());
+        detailIntent.putExtra("MAPEL",dashboard.getMapel());
         startActivity(detailIntent);
     }
 }

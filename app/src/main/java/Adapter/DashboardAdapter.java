@@ -1,3 +1,4 @@
+
 package Adapter;
 
 import android.view.LayoutInflater;
@@ -33,8 +34,8 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
     @Override
     public void onBindViewHolder(@NonNull DashboardHolder holder, int position) {
         final Dashboard getData = listdata.get(position);
-        String titlemenu = getData.getTitle();
-        String logomenu = getData.getImg();
+        String titlemenu = getData.getMapel();
+        String logomenu = getData.getPict();
 
         holder.titleMenu.setText(titlemenu);
         if(logomenu.equals("pictmat")){
