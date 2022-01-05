@@ -21,7 +21,7 @@ public class Reservasiselesai extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(Reservasiselesai.this, dashboard.class);
+                Intent intent = new Intent(Reservasiselesai.this, MenuActivity.class);
                 startActivity(intent);
 
             }
