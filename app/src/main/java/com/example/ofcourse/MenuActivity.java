@@ -1,37 +1,38 @@
 package com.example.ofcourse;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
 
+import com.example.ofcourse.Model.ResponseGuru;
+import com.example.ofcourse.Model.ResponseMenu;
 import com.example.ofcourse.api.ApiClient;
 import com.example.ofcourse.api.ApiInterface;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.RecursiveTask;
 
-import Adapter.DashboardAdapter;
+import Adapter.GuruAdapter;
 import Adapter.MenuAdapter;
-import Model.Dashboard;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class MenuActivity extends AppCompatActivity implements MenuAdapter.OnDashViewHolderClick{
+public class MenuActivity extends AppCompatActivity{
 
     RecyclerView recyclerView;
-    RecyclerView recview;
     MenuAdapter adapter;
-    LinearLayoutManager linearLayoutManager;
+    GridLayoutManager gridLayoutManager;
+    List<ResponseMenu> menuList;
 
     ImageView profil,pencarian;
     Button pemesanan;
@@ -42,8 +43,9 @@ public class MenuActivity extends AppCompatActivity implements MenuAdapter.OnDas
         setContentView(R.layout.activity_menu);
 
         recyclerView = findViewById(R.id.recview);
-        linearLayoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(linearLayoutManager);
+        menuList = new ArrayList<>();
+        gridLayoutManager = new GridLayoutManager(this,3);
+        recyclerView.setLayoutManager(gridLayoutManager);
 
         profil = findViewById(R.id.foto_profil);
         profil.setOnClickListener(new View.OnClickListener() {
@@ -73,38 +75,26 @@ public class MenuActivity extends AppCompatActivity implements MenuAdapter.OnDas
             }
         });
 
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://ofcourse2.herokuapp.com/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
 
-
-
-        ApiInterface apiInterface = retrofit.create(ApiInterface.class);
-        Call<List<responsemodel>> call = apiInterface.getPost();
-        call.enqueue(new Callback<List<responsemodel>>() {
+        ApiInterface apiInterface = ApiClient.getClient().create(ApiInterface.class);
+        Call<List<ResponseMenu>> call = apiInterface.getPost();
+        call.enqueue(new Callback<List<ResponseMenu>>() {
             @Override
-            public void onResponse(Call<List<responsemodel>> call, Response<List<responsemodel>> response) {
+            public void onResponse(Call<List<ResponseMenu>> call, Response<List<ResponseMenu>> response) {
 
-                if (response.isSuccessful()){
-                    List<responsemodel> posts = response.body();
-                    adapter = new MenuAdapter(MenuActivity.this, posts);
-                    recyclerView.setAdapter(adapter);
+                if (!response.isSuccessful()){
+                    return;
                 }
+                menuList = response.body();
+                adapter = new MenuAdapter(menuList,MenuActivity.this);
+                recyclerView.setAdapter(adapter);
             }
 
             @Override
-            public void onFailure(Call<List<responsemodel>> call, Throwable t) {
-
+            public void onFailure(Call<List<ResponseMenu>> call, Throwable t) {
+                Log.d("TAG","onFailure"+t.getLocalizedMessage());
             }
         });
-
     }
 
-
-    public void onClick(Dashboard dashboard) {
-        Intent detailIntent =  new Intent(this,listmapel.class);
-        detailIntent.putExtra("MAPEL",dashboard.getMapel());
-        startActivity(detailIntent);
-    }
 }

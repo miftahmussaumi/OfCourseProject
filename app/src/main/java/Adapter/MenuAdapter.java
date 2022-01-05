@@ -1,6 +1,8 @@
 package Adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,60 +14,59 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.example.ofcourse.ListGuru;
 import com.example.ofcourse.R;
-import com.example.ofcourse.responsemodel;
+import com.example.ofcourse.Model.ResponseMenu;
 
 import java.util.List;
 
 public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.AdapterHolder> {
-
-    private Context context;
-    private List<responsemodel> datalist;
+    List<ResponseMenu> list;
+    Context context;
     private String pathImage = "https://cdn.pixabay.com/photo/2016/05/31/13/22/maths-1426891_1280.png";
-    public MenuAdapter(Context context, List<responsemodel> datalist){
+
+    public MenuAdapter(List<ResponseMenu> list, Context context) {
+        this.list = list;
         this.context = context;
-        this.datalist= datalist;
     }
 
     @NonNull
     @Override
     public MenuAdapter.AdapterHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.activity_menu_item,parent,false);
-        AdapterHolder holder = new AdapterHolder(view);
-        return holder;
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_menu_item,parent,false);
+        return new AdapterHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MenuAdapter.AdapterHolder holder, int position) {
-
-        final responsemodel responsemodel = datalist.get(position);
-        String  m_mapel = responsemodel.getNama_mapel();
-
-        holder.m_mapel.setText(m_mapel);
+    public void onBindViewHolder(@NonNull AdapterHolder holder, @SuppressLint("RecyclerView") int position) {
+        holder.mapel.setText(list.get(position).getNamaMapel()+"");
         Glide.with(holder.itemView.getContext())
                 .load(pathImage)
                 .apply(new RequestOptions().fitCenter())
-                .into(holder.m_gambar);
+                .into(holder.gambar);
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, ListGuru.class);
+                intent.putExtra("post", list.get(position));
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
-        return datalist.size();
-    }
-
-    public interface OnDashViewHolderClick {
+        return list.size();
     }
 
     public class AdapterHolder extends RecyclerView.ViewHolder {
-        TextView m_mapel;
-        ImageView m_gambar;
+        TextView mapel;
+        ImageView gambar;
         public AdapterHolder(@NonNull View itemView) {
             super(itemView);
-
-            m_mapel = itemView.findViewById(R.id.m_mapel);
-            m_gambar = itemView.findViewById(R.id.m_gambar);
-
+            mapel = itemView.findViewById(R.id.m_mapel);
+            gambar = itemView.findViewById(R.id.m_gambar);
         }
     }
 }

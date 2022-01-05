@@ -3,7 +3,7 @@
     package="com.example.ofcourse">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -37,19 +37,10 @@
             android:name=".Formreservasi"
             android:exported="false" />
         <activity
-            android:name=".dashboard_item"
+            android:name=".ListGuru"
             android:exported="true" />
         <activity
-            android:name=".listmapel_item"
-            android:exported="true" />
-        <activity
-            android:name=".listmapel"
-            android:exported="true" />
-        <activity
-            android:name=".dashboard"
-            android:exported="true" />
-        <activity
-            android:name=".detail_guru"
+            android:name=".DetailGuru"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".detail_guru"
+    tools:context=".DetailGuru"
     android:background="#ffffff"
     android:orientation="vertical">
 
@@ -50,15 +50,18 @@
         android:textSize="18dp"
         tools:ignore="InvalidId" />
     <TextView
+        android:id="@+id/d_pendidikan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="S1-Jurusan Bahasa Ingris"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="#000000"
-        android:textSize="18dp" />
+        android:textSize="18dp"
+        tools:ignore="InvalidId" />
 
     <TextView
+        android:id="@+id/d_ket_guru"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="''\Language is the dress of thought\''"
@@ -68,7 +71,7 @@
         android:textSize="18dp" />
 
     <TextView
-        android:id="@+id/biaya"
+        android:id="@+id/d_biaya"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="1dp"
@@ -99,63 +102,7 @@
         android:textColor="#000000"
         android:textSize="18dp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:text="Tingkat"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#000000"
-        android:textSize="22dp"
-        android:textStyle="bold" />
 
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:columnOrderPreserved="false"
-        android:padding="10dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/tingkat"
-            android:padding="5dp"
-            android:text="  pemula "
-            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-            android:textSize="15dp"
-            android:layout_marginLeft="10dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/tingkat"
-            android:padding="5dp"
-            android:text="  SMP "
-            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-            android:textSize="15dp"
-            android:layout_marginLeft="10dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/tingkat"
-            android:padding="5dp"
-            android:text="  SMA "
-            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-            android:textSize="15dp"
-            android:layout_marginLeft="10dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/tingkat"
-            android:padding="5dp"
-            android:text="  Sarjana S1 "
-            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-            android:textSize="15dp"
-            android:layout_marginLeft="10dp"/>
-    </GridLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
