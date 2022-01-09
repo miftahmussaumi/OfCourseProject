@@ -34,6 +34,7 @@
         app:layout_constraintHorizontal_bias="0.131"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.325"
         tools:visibility="visible" />
 
     <EditText
@@ -65,13 +66,24 @@
         app:layout_constraintTop_toTopOf="@+id/editKota"
         app:srcCompat="@drawable/iconpencarian" />
 
+    <Button
+        android:id="@+id/map"
+        android:layout_width="290dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/ungu_muda"
+        android:textColor="@color/black"
+        android:text="Cari Guru Disekitarmu"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="@+id/editMapel"
+        app:layout_constraintTop_toBottomOf="@+id/editMapel" />
+
     <TextView
         android:id="@+id/textView888"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="30dp"
         android:paddingBottom="10dp"
-        android:text="Guru bahasa inggris di sekitarmu:"
+        android:text="Hasil Pencarian :"
         android:textColor="#000000"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"

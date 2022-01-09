@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 
@@ -17,12 +19,22 @@ public class pencarian extends AppCompatActivity {
     PencarianAdapter pencarianAdapter;
     ArrayList<Pencarian> datapencarian;
     LinearLayoutManager layoutManager;
+    Button map;
 //    TextView textLabelPencarian;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pencarian);
+
+        map = findViewById(R.id.map);
+        map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(pencarian.this, get_location.class);
+                startActivity(intent);
+            }
+        });
 
         recyclerView = findViewById(R.id.rv_pencarian);
         addData();
