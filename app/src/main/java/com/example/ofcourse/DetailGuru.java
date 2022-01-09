@@ -50,7 +50,7 @@ public class DetailGuru extends AppCompatActivity {
         mapel.setText(d_mapel);
         pendidikan.setText(d_pendidikan);
         ket_guru.setText(d_ket_guru);
-        biaya.setText(String.valueOf(d_biaya));
+        biaya.setText("Rp " + String.valueOf(d_biaya) + "/jam");
 
 
 
