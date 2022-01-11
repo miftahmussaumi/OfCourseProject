@@ -1,15 +1,21 @@
 package com.example.ofcourse;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.ofcourse.Model.ResponseGuru;
 import com.example.ofcourse.Model.ResponseMenu;
@@ -29,13 +35,19 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MenuActivity extends AppCompatActivity{
 
+    public static final String CHANNEL_ID = "com.example.ofcourse.CH01";
+
     RecyclerView recyclerView;
     MenuAdapter adapter;
     GridLayoutManager gridLayoutManager;
     List<ResponseMenu> menuList;
 
-    ImageView profil,pencarian;
-    Button pemesanan;
+    ImageView profil;
+    Button pemesanan, buttonNotifikasi, buttonGeolocation, buttonPencarian;
+
+    TextView nama_profil;
+    String name;
+    SessionManager sessionManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +59,17 @@ public class MenuActivity extends AppCompatActivity{
         gridLayoutManager = new GridLayoutManager(this,3);
         recyclerView.setLayoutManager(gridLayoutManager);
 
+        sessionManager = new SessionManager(MenuActivity.this);
+        if (sessionManager.isLoggedIn() == false){
+            moveToLogin();
+        }
+
+        nama_profil = findViewById(R.id.nama_profil);
+
+        name = sessionManager.getUserDetail().get(SessionManager.NAME);
+
+        nama_profil.setText(name);
+
         profil = findViewById(R.id.foto_profil);
         profil.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,11 +79,21 @@ public class MenuActivity extends AppCompatActivity{
             }
         });
 
-        pencarian = findViewById(R.id.pencarian);
-        pencarian.setOnClickListener(new View.OnClickListener() {
+
+        buttonGeolocation = findViewById(R.id.buttonGeolocation);
+        buttonGeolocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuActivity.this, pencarian.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonPencarian = findViewById(R.id.buttonPencarian);
+        buttonPencarian.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuActivity.this, SearchActivity.class);
                 startActivity(intent);
             }
         });
@@ -75,6 +108,13 @@ public class MenuActivity extends AppCompatActivity{
             }
         });
 
+        buttonNotifikasi = findViewById(R.id.buttonNotifikasi);
+        buttonNotifikasi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayNotification();
+            }
+        });
 
         ApiInterface apiInterface = ApiClient.getClient().create(ApiInterface.class);
         Call<List<ResponseMenu>> call = apiInterface.getPost();
@@ -95,6 +135,55 @@ public class MenuActivity extends AppCompatActivity{
                 Log.d("TAG","onFailure"+t.getLocalizedMessage());
             }
         });
+    }
+
+    private void displayNotification() {
+
+        //Panggil Manager Notifikasi
+        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+
+        //Buat Channel dan tambahkan ke Notification Manager
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel(
+                    CHANNEL_ID,
+                    "Channel Notifikasi ofCourse",
+                    NotificationManager.IMPORTANCE_DEFAULT
+            );
+            notificationManager.createNotificationChannel(channel);
+        }
+
+        //Buat pending Intent
+        Intent menuIntent = new Intent(this, MenuActivity.class);
+
+        PendingIntent menuPendingIntent = PendingIntent.getActivity(
+                getApplicationContext(),
+                12212,
+                menuIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT
+        );
+
+        //Bikin notifikasi
+        Notification notif = new NotificationCompat.Builder(this, CHANNEL_ID)
+                .setSmallIcon(R.drawable.iconpencarian)
+                .setContentTitle("Promo Hari Guru")
+                .setContentText("Potongan 70% hanya di minggu ini, voucher terbatas!")
+                .setContentIntent(menuPendingIntent)
+                .build();
+
+
+
+        //Tampilkan notifikasinya
+        notificationManager.notify(123, notif);
+
+    }
+
+    private  void moveToLogin(){
+        Intent intent = new Intent(MenuActivity.this, LoginActivity.class);
+        intent.setFlags(intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY);
+        startActivity(intent);
+        finish();
+
     }
 
 }
