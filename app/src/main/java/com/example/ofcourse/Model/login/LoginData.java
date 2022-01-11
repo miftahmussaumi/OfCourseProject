@@ -48,8 +48,8 @@ public class LoginData {
 		this.phone = phone;
 	}
 
-	public Object getPhone(){
-		return phone;
+	public String getPhone(){
+		return (String) phone;
 	}
 
 	public void setName(String name){

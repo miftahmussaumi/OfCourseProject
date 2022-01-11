@@ -13,69 +13,20 @@
         android:layout_height="200dp"
         android:background="@drawable/background_ungu" />
 
-    <EditText
-        android:id="@+id/editMapel"
-        android:layout_width="160dp"
-        android:layout_height="37dp"
-        android:layout_weight="1"
-        android:background="@drawable/edittext"
-        android:ems="10"
-        android:focusable="false"
-        android:focusableInTouchMode="true"
-        android:hint="Bahasa Inggris"
-        android:inputType="textPersonName"
-        android:paddingLeft="10dp"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        android:textSize="16sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/view2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.131"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.325"
-        tools:visibility="visible" />
-
-    <EditText
-        android:id="@+id/editKota"
-        android:layout_width="120dp"
-        android:layout_height="37dp"
-        android:layout_weight="1"
-        android:background="@drawable/edittext"
-        android:ems="10"
-        android:focusable="false"
-        android:focusableInTouchMode="true"
-        android:hint="Padang"
-        android:inputType="textPersonName"
-        android:paddingLeft="10dp"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        android:textSize="16sp"
-        android:visibility="visible"
-        app:layout_constraintStart_toEndOf="@+id/editMapel"
-        app:layout_constraintTop_toTopOf="@+id/editMapel" />
-
-    <ImageButton
-        android:id="@+id/buttonCari"
-        android:layout_width="56dp"
-        android:layout_height="39dp"
-        android:background="#00FFFFFF"
-        android:visibility="visible"
-        app:layout_constraintStart_toEndOf="@+id/editKota"
-        app:layout_constraintTop_toTopOf="@+id/editKota"
-        app:srcCompat="@drawable/iconpencarian" />
-
     <Button
         android:id="@+id/map"
         android:layout_width="290dp"
         android:layout_height="50dp"
         android:backgroundTint="@color/ungu_muda"
-        android:textColor="@color/black"
         android:text="Cari Guru Disekitarmu"
+        android:textColor="@color/black"
         android:textSize="12dp"
-        app:layout_constraintStart_toStartOf="@+id/editMapel"
-        app:layout_constraintTop_toBottomOf="@+id/editMapel" />
+        app:layout_constraintBottom_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.092" />
 
     <TextView
         android:id="@+id/textView888"
@@ -91,6 +42,7 @@
         app:layout_constraintTop_toBottomOf="@+id/view2"></TextView>
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="wrap_content"
         android:layout_height="498dp"
         app:layout_constraintBottom_toBottomOf="parent"

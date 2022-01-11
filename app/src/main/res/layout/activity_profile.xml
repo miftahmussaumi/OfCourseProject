@@ -31,7 +31,7 @@
             tools:ignore="InvalidId" />
 
         <TextView
-            android:id="@+id/nama_pennguna"
+            android:id="@+id/nama_pengguna"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/foto_profil"
@@ -46,8 +46,8 @@
             android:id="@+id/button_edit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/nama_pennguna"
-            android:layout_alignBottom="@+id/nama_pennguna"
+            android:layout_alignStart="@+id/nama_pengguna"
+            android:layout_alignBottom="@+id/nama_pengguna"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="103dp"
             android:layout_marginEnd="102dp"
@@ -64,7 +64,7 @@
             android:src="@drawable/p_username" />
 
         <TextView
-            android:id="@+id/username"
+            android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/p_profil"
@@ -73,13 +73,14 @@
             android:layout_toEndOf="@+id/p_profil"
             android:text="USERNAME"
             android:textColor="@color/black"
-            android:textSize="15dp"
+            android:textSize="12sp"
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/tvname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/username"
+            android:layout_alignStart="@+id/name"
             android:layout_alignBottom="@+id/p_profil"
             android:layout_marginStart="3dp"
             android:layout_marginBottom="3dp"
@@ -106,13 +107,14 @@
             android:layout_toEndOf="@+id/p_phone"
             android:text="PHONE"
             android:textColor="@color/black"
-            android:textSize="15dp"
+            android:textSize="12dp"
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/tvphone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/username"
+            android:layout_alignStart="@+id/name"
             android:layout_alignBottom="@+id/p_phone"
             android:layout_marginStart="3dp"
             android:layout_marginBottom="3dp"
@@ -139,83 +141,18 @@
             android:layout_toEndOf="@+id/p_phone"
             android:text="EMAIL"
             android:textColor="@color/black"
-            android:textSize="15dp"
+            android:textSize="12dp"
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/tvemail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/username"
+            android:layout_alignStart="@+id/name"
             android:layout_alignBottom="@+id/p_email"
             android:layout_marginStart="3dp"
             android:layout_marginBottom="3dp"
             android:text="isi email"
-            android:textColor="@color/black"
-            android:textSize="10dp" />
-
-        <ImageView
-            android:id="@+id/p_add"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_below="@+id/p_email"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/p_lokasi" />
-
-        <TextView
-            android:id="@+id/add"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/p_add"
-            android:layout_marginStart="28dp"
-            android:layout_marginBottom="19dp"
-            android:layout_toEndOf="@+id/p_phone"
-            android:text="ADDRESS"
-            android:textColor="@color/black"
-            android:textSize="15dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/add"
-            android:layout_alignBottom="@+id/p_add"
-            android:layout_marginStart="3dp"
-            android:layout_marginBottom="3dp"
-            android:text="isi alamat"
-            android:textColor="@color/black"
-            android:textSize="10dp" />
-
-        <ImageView
-            android:id="@+id/p_level"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_below="@+id/p_add"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/p_level" />
-
-        <TextView
-            android:id="@+id/level"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/p_level"
-            android:layout_marginStart="28dp"
-            android:layout_marginBottom="19dp"
-            android:layout_toEndOf="@+id/p_level"
-            android:text="EMAIL"
-            android:textColor="@color/black"
-            android:textSize="15dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/username"
-            android:layout_alignBottom="@+id/p_level"
-            android:layout_marginStart="3dp"
-            android:layout_marginBottom="3dp"
-            android:text="isi level"
             android:textColor="@color/black"
             android:textSize="10dp" />
 

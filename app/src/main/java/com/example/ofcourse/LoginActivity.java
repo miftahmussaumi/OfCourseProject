@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 
 import com.example.ofcourse.Model.login.Login;
+import com.example.ofcourse.Model.login.LoginData;
 import com.example.ofcourse.api.ApiClient;
 import com.example.ofcourse.api.ApiInterface;
 
@@ -23,6 +24,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     EditText editEmail, editPassword;
     String Email, Password;
     ApiInterface apiInterface;
+    SessionManager sessionManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,9 +57,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             public void onResponse(Call<Login> call, Response<Login> response) {
                 if (response.body() != null & response.isSuccessful() && response.body().isStatus()) {
 //                    Toast.makeText(LoginActivity.this, response.body().getLoginData().getName(), Toast.LENGTH_SHORT).show();
+
+                    sessionManager = new SessionManager(LoginActivity.this);
+                    LoginData loginData = response.body().getLoginData();
+                    sessionManager.createLoginSession(loginData);
+
                     Toast.makeText(LoginActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
                     startActivity(intent);
+
+                    finish();
 
                 }else{
                     Toast.makeText(LoginActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
