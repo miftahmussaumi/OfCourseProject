@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pesanan_sudah_item">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/f_foto_guru"
+            android:layout_width="88dp"
+            android:layout_height="78dp"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="2dp"
+            tools:layout_editor_absoluteY="10dp"
+            tools:src="@drawable/profil1" />
+
+        <TextView
+            android:id="@+id/f_mapel"
+            android:layout_width="255dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@+id/f_foto_guru"
+            android:text="Mata Pelajaran"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/f_foto_guru"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/f_nama_guru"
+            android:layout_width="256dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/f_mapel"
+            android:layout_toEndOf="@id/f_foto_guru"
+            android:ellipsize="end"
+            android:maxLines="5"
+            android:text="Nama Guru"
+            app:layout_constraintBottom_toTopOf="@+id/f_tanggal"
+            app:layout_constraintEnd_toEndOf="@+id/f_mapel"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/f_mapel"
+            app:layout_constraintTop_toBottomOf="@+id/f_mapel"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/f_tanggal"
+            android:layout_width="257dp"
+            android:layout_height="17dp"
+            android:layout_below="@+id/f_nama_guru"
+            android:layout_marginBottom="52dp"
+            android:layout_toEndOf="@id/f_foto_guru"
+            android:ellipsize="end"
+            android:maxLines="5"
+            android:text="Tanggal Transakasi"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/f_nama_guru"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/f_nama_guru"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

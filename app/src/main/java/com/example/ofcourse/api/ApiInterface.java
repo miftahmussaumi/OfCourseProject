@@ -4,6 +4,7 @@ import com.example.ofcourse.Model.Reservasi;
 import com.example.ofcourse.Model.ResponseDetailGuru;
 import com.example.ofcourse.Model.ResponseGuru;
 import com.example.ofcourse.Model.ResponseReview;
+import com.example.ofcourse.Model.ResponseTransaksi;
 import com.example.ofcourse.Model.login.Login;
 import com.example.ofcourse.Model.register.Register;
 import com.example.ofcourse.Model.ResponseMenu;
@@ -58,7 +59,11 @@ public interface ApiInterface {
             @Field("lokasi_kls") String lokasi_kls,
             @Field("ket_tambahan") String ket_tambahan
     );
+    @GET("api/pesanan/belum/{id_users}")
+    Call<List<ResponseTransaksi>> getTransaksiBelum(@Path("id_users") String usersID);
 
+    @GET("api/pesanan/sudah/{id_users}")
+    Call<List<ResponseTransaksi>> getTransaksiSudah(@Path("id_users") String usersID);
 //    @FormUrlEncoded
 //    @POST("api/editprofil")
 //    Call<Editresponse> editResponse(
