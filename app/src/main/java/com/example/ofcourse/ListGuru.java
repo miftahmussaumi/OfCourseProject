@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import com.example.ofcourse.Model.ResponseGuru;
 import com.example.ofcourse.Model.ResponseMenu;
@@ -27,12 +28,19 @@ public class ListGuru extends AppCompatActivity{
     List<ResponseGuru> list;
     RecyclerView recyclerView;
     GuruAdapter adapter;
+    TextView mapel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listmapel);
+
+        mapel = findViewById(R.id.judul_mapel);
+
         menu = (ResponseMenu) getIntent().getSerializableExtra("post");
+
+        String nama_mapel = menu.getNamaMapel();
+        mapel.setText(nama_mapel);
 
         recyclerView = findViewById(R.id.rv_mapel);
         list = new ArrayList<>();

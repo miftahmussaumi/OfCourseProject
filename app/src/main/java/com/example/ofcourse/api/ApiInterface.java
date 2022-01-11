@@ -2,6 +2,7 @@ package com.example.ofcourse.api;
 
 import com.example.ofcourse.Model.ResponseDetailGuru;
 import com.example.ofcourse.Model.ResponseGuru;
+import com.example.ofcourse.Model.ResponseReview;
 import com.example.ofcourse.Model.login.Login;
 import com.example.ofcourse.Model.register.Register;
 import com.example.ofcourse.Model.ResponseMenu;
@@ -31,7 +32,6 @@ public interface ApiInterface {
     @GET("/api/guru/mapel/{id}")
     Call<List<ResponseGuru>>getDataGuru(@Path("id") int postID);
 
-    @GET("api/detail_guru/{id_guru}")
-    Call<List<ResponseDetailGuru>>getDetailGuru(@Path("id_guru") int postID);
-
+    @GET("/api/guru/review/{id}")
+    Call<List<ResponseReview>>getReview(@Path("id") int reviewID);
 }

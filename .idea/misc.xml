@@ -58,7 +58,16 @@
         <entry key="..\:/Kuliah/Semester 5/PTB/OfCourseProject/app/src/main/res/layout/activity_pencarian.xml" value="0.10144927536231885" />
         <entry key="..\:/Kuliah/Semester 5/PTB/OfCourseProject/app/src/main/res/layout/activity_profile.xml" value="0.10144927536231885" />
         <entry key="..\:/Kuliah/Semester 5/PTB/OfCourseProject/app/src/main/res/layout/activity_reservasiselesai.xml" value="0.1" />
+        <entry key="..\:/OfCourseProject/app/src/main/res/layout/activity_detail_guru.xml" value="0.33" />
+        <entry key="..\:/OfCourseProject/app/src/main/res/layout/activity_detail_item_review.xml" value="0.33" />
         <entry key="..\:/OfCourseProject/app/src/main/res/layout/activity_konfirmasi_reservasi.xml" value="0.1" />
+        <entry key="..\:/OfCourseProject/app/src/main/res/layout/activity_listmapel.xml" value="0.20697463768115942" />
+        <entry key="..\:/OfCourseProject/app/src/main/res/layout/activity_main.xml" value="0.20697463768115942" />
+        <entry key="..\:/OfCourseProject/app/src/main/res/layout/activity_menu.xml" value="0.20697463768115942" />
+        <entry key="..\:/OfCourseProject/app/src/main/res/layout/activity_pencarian_item.xml" value="0.20697463768115942" />
+        <entry key="..\:/OfCourseProject/app/src/main/res/layout/activity_pesanan_belum_disetujui.xml" value="0.25" />
+        <entry key="..\:/OfCourseProject/app/src/main/res/layout/activity_pesanan_telah_disetujui.xml" value="0.1802536231884058" />
+        <entry key="..\:/OfCourseProject/app/src/main/res/layout/item_review.xml" value="0.33" />
         <entry key="..\:/Users/S430F/AndroidStudioProjects/OfCourseProject/app/src/main/res/drawable/bg_input.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/S430F/AndroidStudioProjects/OfCourseProject/app/src/main/res/drawable/button_edit.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/S430F/AndroidStudioProjects/OfCourseProject/app/src/main/res/layout/activity_daftar.xml" value="0.14402173913043478" />

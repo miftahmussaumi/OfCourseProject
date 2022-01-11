@@ -36,22 +36,7 @@ public class GuruAdapter extends RecyclerView.Adapter<GuruAdapter.MapelHolder> {
     @Override
     public GuruAdapter.MapelHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_listmapel_item,parent,false);
-        final GuruAdapter.MapelHolder viewHolder = new GuruAdapter.MapelHolder(view);
-        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(parent.getContext(), DetailGuru.class);
-                ResponseGuru result = new ResponseGuru();
-                result.setNamaGuru(listdata.get(viewHolder.getAdapterPosition()).getNamaGuru());
-                result.setNamaMapel(listdata.get(viewHolder.getAdapterPosition()).getNamaMapel());
-                result.setPendidikan(listdata.get(viewHolder.getAdapterPosition()).getPendidikan());
-                result.setKetGuru(listdata.get(viewHolder.getAdapterPosition()).getKetGuru());
-                result.setUpah(listdata.get(viewHolder.getAdapterPosition()).getUpah());
-                i.putExtra(DetailGuru.ITEM_EXTRA, result);
-                parent.getContext().startActivity(i);
-            }
-        });
-        return viewHolder;
+        return new GuruAdapter.MapelHolder(view);
     }
 
     @Override
@@ -64,6 +49,15 @@ public class GuruAdapter extends RecyclerView.Adapter<GuruAdapter.MapelHolder> {
                 .load(pathImage)
                 .apply(new RequestOptions().fitCenter())
                 .into(holder.photo);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, DetailGuru.class);
+                intent.putExtra("review", listdata.get(position));
+                context.startActivity(intent);
+            }
+        });
     }
 
 
