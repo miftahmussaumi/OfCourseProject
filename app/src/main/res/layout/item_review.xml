@@ -24,7 +24,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/fotoReview"
+                android:id="@+id/r_foto"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -35,7 +35,7 @@
                 app:srcCompat="@drawable/profil1" />
 
             <TextView
-                android:id="@+id/textUser"
+                android:id="@+id/r_namauser"
                 tools:layout_editor_absoluteY="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -44,11 +44,11 @@
                 android:textColor="#000000"
                 android:textSize="15sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/fotoReview"
+                app:layout_constraintStart_toStartOf="@+id/r_foto"
                 tools:ignore="MissingConstraints" />
 
             <TextView
-                android:id="@+id/textReview"
+                android:id="@+id/r_review"
                 android:layout_width="237dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
@@ -56,8 +56,8 @@
                 android:textColor="#000000"
                 android:textSize="11sp"
                 app:layout_constraintBottom_toBottomOf="@+id/fotoReview"
-                app:layout_constraintStart_toStartOf="@+id/textUser"
-                app:layout_constraintTop_toBottomOf="@+id/textUser" />
+                app:layout_constraintStart_toStartOf="@+id/r_namauser"
+                app:layout_constraintTop_toBottomOf="@+id/r_namauser" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

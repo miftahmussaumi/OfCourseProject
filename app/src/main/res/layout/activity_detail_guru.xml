@@ -139,7 +139,7 @@
         android:layout_height="180dp">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvReview"
+            android:id="@+id/rv_Review"
             android:layout_width="392dp"
             android:layout_height="181dp"
             android:visibility="visible"

@@ -9,7 +9,7 @@ import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
 import java.util.List;
 
-public class ResponseGuru implements Parcelable {
+public class ResponseGuru implements Serializable {
     @SerializedName("id")
     @Expose
     private Integer id;
@@ -53,18 +53,6 @@ public class ResponseGuru implements Parcelable {
         ketGuru = in.readString();
         namaMapel = in.readString();
     }
-
-    public static final Creator<ResponseGuru> CREATOR = new Creator<ResponseGuru>() {
-        @Override
-        public ResponseGuru createFromParcel(Parcel in) {
-            return new ResponseGuru(in);
-        }
-
-        @Override
-        public ResponseGuru[] newArray(int size) {
-            return new ResponseGuru[size];
-        }
-    };
 
     public ResponseGuru() {
 
@@ -148,30 +136,4 @@ public class ResponseGuru implements Parcelable {
                 '}';
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        if (id == null) {
-            dest.writeByte((byte) 0);
-        } else {
-            dest.writeByte((byte) 1);
-            dest.writeInt(id);
-        }
-        dest.writeString(namaGuru);
-        dest.writeString(pendidikan);
-        dest.writeString(alamat);
-        dest.writeString(noHp);
-        if (upah == null) {
-            dest.writeByte((byte) 0);
-        } else {
-            dest.writeByte((byte) 1);
-            dest.writeInt(upah);
-        }
-        dest.writeString(ketGuru);
-        dest.writeString(namaMapel);
-    }
 }

@@ -70,7 +70,7 @@ public class MenuActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MenuActivity.this, pesanan_belum_disetujui.class);
+                Intent intent = new Intent(MenuActivity.this, riwayat_pesanan.class);
                 startActivity(intent);
             }
         });

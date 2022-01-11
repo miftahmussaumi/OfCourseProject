@@ -31,7 +31,7 @@ public class pencarian extends AppCompatActivity {
         map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(pencarian.this, get_location.class);
+                Intent intent = new Intent(pencarian.this, current_loc.class);
                 startActivity(intent);
             }
         });
@@ -43,7 +43,7 @@ public class pencarian extends AppCompatActivity {
         pencarianAdapter = new PencarianAdapter(datapencarian);
         recyclerView.setAdapter(pencarianAdapter);
 
-//        Intent detailPencarianIntent = getIntent();
+//        Intent detailPencarianIntent = getIntent();\
 //        String namaPencarian = detailPencarianIntent.getStringExtra("Pencarian");
 //        textLabelPencarian = findViewById(R.id.judul_Pencarian);
 //        textLabelPencarian.setText(namaPencarian);

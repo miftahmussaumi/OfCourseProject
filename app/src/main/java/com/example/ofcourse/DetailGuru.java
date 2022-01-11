@@ -1,26 +1,11 @@
 package com.example.ofcourse;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
-
-
-import com.example.ofcourse.Model.ResponseDetailGuru;
 import com.example.ofcourse.Model.ResponseGuru;
-
-import Adapter.GuruAdapter;
-import Adapter.ReviewAdapter;
-import Model.Mapel;
-import Model.Review;
-
-import java.util.ArrayList;
 
 public class DetailGuru extends AppCompatActivity {
     public static final String ITEM_EXTRA = "item_extra";
