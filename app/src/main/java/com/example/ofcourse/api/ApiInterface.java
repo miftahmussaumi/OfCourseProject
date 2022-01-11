@@ -1,5 +1,6 @@
 package com.example.ofcourse.api;
 
+import com.example.ofcourse.Model.Reservasi;
 import com.example.ofcourse.Model.ResponseDetailGuru;
 import com.example.ofcourse.Model.ResponseGuru;
 import com.example.ofcourse.Model.ResponseReview;
@@ -43,6 +44,19 @@ public interface ApiInterface {
     @GET("api/cari/")
     Call<List<responsemodelsearch>> getQuery(
             @Query("s") String s
+    );
+
+    @FormUrlEncoded
+    @POST("api/pesanan/buat")
+    Call<Reservasi>ReservasiResponse(
+            @Field("id_guru") Integer id_guru,
+//            @Field("id_mapel") Integer id_mapel,
+            @Field("id_users") Integer id_users,
+            @Field("tgl") String tgl,
+            @Field("jam_kls") String jam_kls,
+            @Field("durasi") Integer durasi,
+            @Field("lokasi_kls") String lokasi_kls,
+            @Field("ket_tambahan") String ket_tambahan
     );
 
 //    @FormUrlEncoded

@@ -8,23 +8,42 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class Formreservasi extends AppCompatActivity {
+import com.example.ofcourse.Model.Reservasi;
+import com.example.ofcourse.Model.register.Register;
+import com.example.ofcourse.api.ApiClient;
+import com.example.ofcourse.api.ApiInterface;
 
-    Button button1;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+public class Formreservasi extends AppCompatActivity implements View.OnClickListener {
+
+    TextView formidguru, formidmapel, formidusers;
+    Button buttonpesan;
     ActionBar actionBar;
-    private TextView notr;
-    private TextView mapel;
-    private TextView biaya;
-    private TextView guru;
-    private EditText tgl;
-    private EditText jam;
-    private EditText durasi;
-    private EditText jml;
-    private EditText lokasi;
-    private EditText ket;
-    private String mpl, bia, gru;
+     EditText tgl;
+     EditText jam;
+     EditText durasi;
+     EditText lokasi;
+     EditText ket;
+
+    String Tgl;
+    String Jam_kls;
+    String Lokasi_kls;
+    String Ket_tambahan;
+
+    Integer id_users, id_guru, id_mapel;
+    Integer   Id_mapel;
+    Integer Id_guru;
+    Integer Durasi;
+    Integer Id_users;
+    ApiInterface apiInterface;
+    SessionManager sessionManager;
 
 
     @Override
@@ -35,51 +54,45 @@ public class Formreservasi extends AppCompatActivity {
         actionBar = getSupportActionBar();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        button1 = findViewById(R.id.buttonpesan);
-        notr = (TextView) findViewById(R.id.formnotr);
-        mapel = (TextView) findViewById(R.id.formmapel);
-        biaya = (TextView) findViewById(R.id.formbiaya);
-        guru = (TextView) findViewById(R.id.formguru);
-        tgl = (EditText) findViewById(R.id.formtgl);
-        jam = (EditText) findViewById(R.id.formjam);
-        durasi = (EditText) findViewById(R.id.formdurasi);
-        jml = (EditText) findViewById(R.id.formjumlah);
-        lokasi = (EditText) findViewById(R.id.formlokasi);
-        ket = (EditText) findViewById(R.id.formket);
+        sessionManager = new SessionManager(Formreservasi.this);
+        if (sessionManager.isLoggedIn() == false){
+            moveToLogin();
+        }
 
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+//         Id_users = Integer.valueOf(sessionManager.getUserDetail().get(SessionManager.ID));
 
-                Intent intent = new Intent(Formreservasi.this, KonfirmasiReservasi.class);
-                intent.putExtra("ntr", notr.getText().toString());
-                intent.putExtra("mapel", mapel.getText().toString());
-                intent.putExtra("biaya", biaya.getText().toString());
-                intent.putExtra("guru", guru.getText().toString());
-                intent.putExtra("tgl", tgl.getText().toString());
-                intent.putExtra("jam", jam.getText().toString());
-                intent.putExtra("durasi", durasi.getText().toString());
-                intent.putExtra("jml", jml.getText().toString());
-                intent.putExtra("lokasi", lokasi.getText().toString());
-                intent.putExtra("ket", ket.getText().toString());
-                startActivity(intent);
-
-            }
-
-        });
+//        id_mapel = findViewById(R.id.formidmapel);
+//
+//        Id_user =findViewById(R.id.formidusers);
+//        Id_user = sessionManager.getUserDetail().get(SessionManager.ID);
 
         Bundle form = getIntent().getExtras();
-        mpl = form.getString("mapel");
-        bia = form.getString("biaya");
-        gru = form.getString("namaguru");
 
-        mapel = findViewById(R.id.formmapel);
-        biaya = findViewById(R.id.formbiaya);
-        guru = findViewById(R.id.formguru);
+        formidguru = findViewById(R.id.formidguru);
+        Id_guru = form.getInt("d_idguru");
+        formidguru.setText(String.valueOf(Id_guru));
 
-        mapel.setText(mpl);
-        biaya.setText(bia);
-        guru.setText(gru);
+        formidmapel = findViewById(R.id.formidmapel);
+        Id_mapel = form.getInt("d_idmapel");
+        formidmapel.setText(String.valueOf(Id_mapel));
+
+        formidusers = findViewById(R.id.formidusers);
+        Id_users = Integer.valueOf(sessionManager.getUserDetail().get(SessionManager.ID));
+        formidusers.setText(String.valueOf(Id_users));
+
+        tgl = findViewById(R.id.formtgl);
+        jam = findViewById(R.id.formjam);
+        durasi = findViewById(R.id.formdurasi);
+        lokasi = findViewById(R.id.formlokasi);
+        ket = findViewById(R.id.formket);
+
+//        Bundle form = getIntent().getExtras();
+//        Id_guru = form.getInt("d_idguru");
+//        Id_mapel = form.getInt("id_mapel");
+
+        buttonpesan = findViewById(R.id.buttonpesan);
+        buttonpesan.setOnClickListener(this);
+
     }
 
     @Override
@@ -91,5 +104,63 @@ public class Formreservasi extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.buttonpesan:
+                Tgl = tgl.getText().toString();
+                Jam_kls = jam.getText().toString();
+//                String dr =durasi.getText().toString();
+//                Durasi = Integer.parseInt(dr);
+                Durasi = Integer.valueOf(String.valueOf(durasi.getText()));
+                Lokasi_kls = lokasi.getText().toString();
+                Ket_tambahan = ket.getText().toString();;
+                Bundle form = getIntent().getExtras();
+                Id_guru = form.getInt("d_idguru");
+                Id_mapel = form.getInt("d_idmapel");
+                Id_users = Integer.valueOf(sessionManager.getUserDetail().get(SessionManager.ID));
+
+                id_guru = Id_guru;
+//                id_mapel = Id_mapel;
+                id_users = Id_users;
+                pesan(Id_guru, Id_users,Tgl,Jam_kls,Durasi,Lokasi_kls,Ket_tambahan);
+                break;
+        }
+    }
+
+    private void pesan(Integer id_guru, Integer id_users,String tgl, String jam_kls, Integer durasi, String lokasi_kls, String ket_tambahan){
+
+        apiInterface = ApiClient.getClient().create(ApiInterface.class);
+      Call<Reservasi> call = apiInterface.ReservasiResponse(id_guru, id_users,tgl, jam_kls, durasi,lokasi_kls,ket_tambahan);
+      call.enqueue(new Callback<Reservasi>() {
+            @Override
+            public void onResponse(Call<Reservasi> call, Response<Reservasi> response) {
+//                if(response.body() != null && response.isSuccessful() && response.body().isStatus()){
+//                    Toast.makeText(Formreservasi.this, response.body(), Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(Formreservasi.this, Reservasiselesai.class);
+                    startActivity(intent);
+                    finish();
+//                } else {
+//                    Toast.makeText(Formreservasi.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+//                }
+            }
+
+            @Override
+            public void onFailure(Call call, Throwable t) {
+
+            }
+        });
+        Intent intent = new Intent(Formreservasi.this, Reservasiselesai.class);
+        startActivity(intent);
+    }
+
+    private  void moveToLogin(){
+        Intent intent = new Intent(Formreservasi.this, LoginActivity.class);
+        intent.setFlags(intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY);
+        startActivity(intent);
+        finish();
+
     }
 }

@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -49,6 +51,8 @@ public class DetailGuru extends AppCompatActivity {
         String d_pendidikan = responseGuru.getPendidikan();
         String d_ket_guru = responseGuru.getKetGuru();
         Integer d_biaya = responseGuru.getUpah();
+        Integer d_idguru = responseGuru.getIdGuru();
+        Integer d_idmapel = responseGuru.getId();
 
         guru.setText(d_guru);
         mapel.setText(d_mapel);
@@ -76,15 +80,17 @@ public class DetailGuru extends AppCompatActivity {
             }
         });
 
-//        butonreservasi = findViewById(R.id.buttonReservasi);
-//        butonreservasi.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                Intent intent = new Intent(detail_guru.this, Formreservasi.class);
-//                startActivity(intent);
-//            }
-//        });
+        butonreservasi = findViewById(R.id.buttonReservasi);
+        butonreservasi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(DetailGuru.this, Formreservasi.class);
+                intent.putExtra("d_idguru", d_idguru);
+                intent.putExtra("d_idmapel", d_idmapel);
+                startActivity(intent);
+            }
+        });
 
 
     }
