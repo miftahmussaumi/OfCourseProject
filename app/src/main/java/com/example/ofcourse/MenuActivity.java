@@ -84,7 +84,7 @@ public class MenuActivity extends AppCompatActivity{
         buttonGeolocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuActivity.this, pencarian.class);
+                Intent intent = new Intent(MenuActivity.this, current_loc.class);
                 startActivity(intent);
             }
         });
@@ -103,7 +103,7 @@ public class MenuActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MenuActivity.this, pesanan_belum_disetujui.class);
+                Intent intent = new Intent(MenuActivity.this, sudah.class);
                 startActivity(intent);
             }
         });

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "101601355063",
+    "project_id": "ofcourse3-c13a0",
+    "storage_bucket": "ofcourse3-c13a0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:101601355063:android:23f6f02ddc025e4c52a6b2",
+        "android_client_info": {
+          "package_name": "com.example.ofcourse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "101601355063-to9a66a7quc09340fcedpjv57ha6qj9e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAng9AniqYmF6BFJF6GX48dPlgEmjAz4q4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "101601355063-to9a66a7quc09340fcedpjv57ha6qj9e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
